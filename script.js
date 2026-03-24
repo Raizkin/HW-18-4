@@ -1,6 +1,6 @@
 const API_URL = "http://localhost:3000/students";
 
-// Отримати студентів
+
 async function getStudents() {
   try {
     const res = await fetch(API_URL);
@@ -11,7 +11,7 @@ async function getStudents() {
   }
 }
 
-// Відобразити студентів
+
 function renderStudents(students) {
   const tbody = document.querySelector("#students-table tbody");
   tbody.innerHTML = "";
@@ -37,7 +37,7 @@ function renderStudents(students) {
   });
 }
 
-// Додати студента
+
 async function addStudent(e) {
   e.preventDefault();
 
@@ -66,7 +66,7 @@ async function addStudent(e) {
   }
 }
 
-// Оновити студента (простий варіант через prompt)
+
 async function updateStudent(id) {
   const newName = prompt("Введіть нове ім'я:");
 
@@ -87,7 +87,7 @@ async function updateStudent(id) {
   }
 }
 
-// Видалити студента
+
 async function deleteStudent(id) {
   if (!confirm("Ви впевнені?")) return;
 
@@ -102,9 +102,6 @@ async function deleteStudent(id) {
   }
 }
 
-// --------------------
-// Обробники подій
-// --------------------
 
 document
   .getElementById("get-students-btn")
